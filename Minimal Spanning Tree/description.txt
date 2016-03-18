@@ -1,0 +1,20 @@
+Dla podanego grafu G znajdź jego drzewo spinające o minimalnej sumie wag.
+Wejście
+
+Pierwsza linia zawiera liczbę całkowitą określającą liczbę przypadków testowych. Kązdy przypadek testowy to jeden graf, który jest opisany w dwóch kolejnych liniach. Pierwsza linia jest postaci n=x,m=y gdzie x i y są liczbami określającymi liczbę wierzchołków i krawędzi grafu. Druga linia opisująca graf zawiera listę krawędzi oddzielonych spacjami. Każda krawędź jest postaci {u,v}w gdzie u,v to wierzchołki należące do krawędzi, natomiast w jest liczbą całkowitą będącą wagą krawędzi. Wierzchołki numerujemy liczbami 0,...,n-1.
+Wyjście
+
+Dla każdego przypadku testowego należy w osobnej linii wypisać liczbę będącą sumą wag krawędzi należących do minimalnego drzewa spinającego.
+Przykład
+
+Wejście:
+2
+n=6,m=9
+{0,1}1 {0,5}3 {1,2}9 {1,3}7 {1,5}5 {2,3}8 {3,4}5 {3,5}2 {4,5}4
+n=7,m=12
+{0,1}2 {0,2}1 {0,3}2 {0,4}1 {0,5}2 {0,6}1 {1,2}4 {1,6}4 {2,3}3 {3,4}4 {4,5}6 {5,6}8
+
+
+Wyjście:
+18
+9

@@ -1,0 +1,21 @@
+Dla podanego grafu prostego znajdź dowolny jego cykl Eulera.
+Wejście
+
+Pierwsza linia zawiera liczbę całkowitą określającą liczbę przypadków testowych. Każdy przypadek testowy to graf prosty zapisany w dwóch liniach. Pierwsza linia opisująca graf jest postaci n=a,m=b gdzie liczby całkowite a,b to odpowiednio liczba wierzchołkół oraz krawędzi grafu. Druga linia opisująca graf to lista krawędzi grafu, oddzielonych spacjami. Każda krawędź jest postaci {u,v} gdzie u,v to numery wierzchołków grafu. Wierzchołki numerujemy od zera.
+Wyjście
+
+Dla każdego grafu należy wypisać jego cykl Eulera poprzez podanie listy wierzchołków, oddzielonych spacjami, w takiej kolejności, w jakiej tworzą cykl. Ostatni wierzchołek na liście jest równy pierwszemu wierzchołkowi z listy.
+Przykład
+
+Wejście
+2
+n=6,m=9
+{0,1} {0,3} {1,2} {1,3} {1,5} {2,5} {3,4} {3,5} {4,5}
+n=4,m=4
+{0,1} {0,3} {1,2} {2,3}
+
+
+Wyjście
+0 1 2 5 4 3 1 5 3 0
+1 2 3 0 1
+

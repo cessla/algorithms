@@ -1,0 +1,74 @@
+Znajdź długości najkrótszych ścieżek od pierwszego wierzchołka digrafu przy pomocy algorytmu Bellmana - Forda. Szkic algorytmu w pseudokodzie:
+
+dane: V(G), E(g) //zbiór wierzchołków, zbiór krawędzi grafu G
+d[1..n] //tablica odległości
+d[0] = 0;
+foreach(v in V(G)/v0)
+   d[v] = +inf;
+for(i=1; i< n; i++) // I
+   foreach((u,v) in E(G)) // II
+      if(d[u] + waga((u,v)) < d[v])
+         d[v] = d[u] + waga((u,v));
+
+W pętli II wybierane są tylko te łuki, które są incydentne do wierzchołka u takiego, że d[u] < +inf. Wierzchołki wybierane są według rosnących etykiet.
+Wejście
+
+Przypadki testowe stanowi p grafów (p <= 100) o różnej ilości wierzchołków n (n <= 100). Łuki grafów posiadają wagi (liczby całkowite z przedziału <-100, 100>). Waga 0 oznacza brak łuku między wierzchołkiem u oraz v.
+
+Format wejścia:
+p [liczba testów]
+n [pierwszy test; liczba wierzchołków pierwszego grafu]
+a11 a12 ... a1n [wagi poszczególnych krawędzi; auv - waga łuku między wierzchołkiem u oraz v]
+...
+...
+...
+an1 an2 ... ann
+[kolejne przypadki testowe]
+...
+
+Wyjście
+
+Dla każdego grafu odpowiedź składa się z n-1 wierszy. Wiersz zawiera odległości od pierwszego wierzchołka po każdym obiegu pętli I (tablica d[]). Odpowiedzi dla każdego grafu oddzielone są pustym wierszem. Symbol nieskończoności (+inf) wypisać jako cyfrę 0.
+
+Format wyjścia:
+d1 d2 d3 ... dn1
+d1 d2 d3 ... dn1
+...
+d1 d2 d3 ... dn1 [n1 - 1 wierszy dla pierwszego grafu ]
+
+d1 d2 d3 ... dnp
+d1 d2 d3 ... dnp
+...
+d1 d2 d3 ... dnp [np - 1 wierszy dla kolejnego grafu]
+
+Przykład
+
+Wejście:
+2
+6
+0 8 0 0 0 6
+0 0 -1 0 0 0
+0 0 0 3 0 -2
+0 0 0 0 0 0
+0 0 0 2 0 0
+0 3 0 0 -2 0
+5
+0 8 0 0 6
+0 0 -5 0 0
+0 0 0 -3 0
+-2 0 0 0 0
+0 0 0 6 0
+
+
+Wyjście:
+0 8 7 10 3 5
+0 8 7 5 3 5
+0 8 7 5 3 5
+0 8 7 5 3 5
+0 8 7 5 3 5
+
+-2 8 3 0 6
+-4 6 1 -2 4
+-6 4 -1 -4 2
+-8 2 -3 -6 0
+

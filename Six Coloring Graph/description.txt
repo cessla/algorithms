@@ -1,0 +1,35 @@
+Odwzorowanie c przyporządkowujące wierzchołkom grafu G liczby 1,...,k nazywać będziemy k-pokolorowaniem (wierzchołkowym) grafu G, jeżeli dla każdej pary wierzchołków sąsiednich (połączonych krawędzią) u,v mamy, że c(u) jest różne od c(v). Twoim zadaniem jest znaleźć dowolne 6-pokolorowanie podanego grafu planarnego.
+Wejście
+
+Pierwsza linia zawiera liczbę całkowitą 1<=t<=100 oznaczająca liczbę zestawów testowych. Następnie podanych jest t grafów planarnych. Każdy z grafów opisany jest w dwóch liniach. Pierwsza linia zawiera napis:
+
+Graph with n nodes and m edges: [graf z n wierzchołkami oraz m krawędziami]
+
+W drugiej linii wypisane są krawędzie grafu oddzielone przecinkami. Każda krawędź podana jest jako para wierzchołków: {u,v}. Wierzchołki grafu numerujemy kolejnymi liczbami: 0...,n-1. 
+Tekst w nawiasach [ ] nie występuje w plikach wejściowych ani wyjściowych.
+Wyjście
+
+Dla każdego przypadku testowego podaj 6-kolorowanie odpowiedniego grafu planarnego. Pokolorowanie grafu o n wierzchołkach powinno być podane w kolejnych n liniach, z których każda zawiera dwie liczby całkowite v c(v), oznaczające numer wierzchołka oraz wartość koloru przydzielonego temu wierzchołkowi.
+Przykład
+
+Wejście:
+2
+Graph with 3 nodes and 3 edges: [graf z 3 wierzchołkami i 3 krawędziami]
+{0,1},{1,2},{2,0}
+Graph with 9 nodes and 14 edges: [graf z 9 wierzchołkami i 14 krawędziami]
+{0,1},{0,2},{0,5},{0,8},{1,2},{2,3},{2,4},{3,4},{4,5},{4,8},{5,6},{5,7},{5,8},{6,7}
+
+Wyjście:
+0 1
+1 2
+2 3
+
+0 1
+1 2
+2 3
+3 4
+4 5
+5 3
+6 1
+7 4
+8 2
